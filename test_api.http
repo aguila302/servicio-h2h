@@ -1,0 +1,62 @@
+# @authToken = {{login.response.body.data.token}}
+@url = http://middleware.local/api
+#@url = http://127.0.0.1:4000
+
+
+###
+
+GET {{url}}/saludo HTTP/1.1
+
+###
+
+GET {{url}}/user HTTP/1.1
+
+###
+    
+# POST {{url}}/create-user HTTP/1.1
+# content-type: application/json
+
+# {
+#     "username": "fvalle",
+#     "password": "$BXs6Er#$KyA"
+# }
+
+# ###
+# # @name login
+
+# POST {{url}}/login HTTP/1.1
+# content-type: application/json
+
+# {
+#     "username": "dimmer",
+#     "password": "Hq@S#hDUWXAI#"
+# }
+
+# ###
+
+# POST {{url}}/detail HTTP/1.1
+# content-type: application/json
+# Authorization: Bearer {{authToken}}
+
+# {
+#     "credito": "1-3211-319",
+#     "cliente": "1-231-9", 
+#     "empresa": "FS"
+# }
+
+# ###
+
+# POST {{url}}/detail HTTP/1.1
+# content-type: application/json
+# Authorization: Bearer {{authToken}}
+
+# {
+#     "credito": "1-3200-1500",
+#     "cliente": "1-194-15"
+# }
+
+# ###
+
+# GET {{url}}/detail HTTP/1.1 
+# Authorization: Bearer {{authToken}}
+
