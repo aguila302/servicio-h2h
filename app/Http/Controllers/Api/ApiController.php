@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
-    public function getGreeting() {
-        return response()->json(['saludo'=>'Hola Finsus']);
+    public function welcome() {
+        return response()->json(['welcome'=>'Buenos días desde finsus']);
     }
 }

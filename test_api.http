@@ -8,18 +8,15 @@
 GET {{url}}/saludo HTTP/1.1
 
 ###
-
-GET {{url}}/user HTTP/1.1
-
-###
     
-# POST {{url}}/create-user HTTP/1.1
-# content-type: application/json
+POST {{url}}/user/store HTTP/1.1
+content-type: application/json
 
-# {
-#     "username": "fvalle",
-#     "password": "$BXs6Er#$KyA"
-# }
+{
+    "name": "emmanuel",
+    "email": "e.varela@finsus.mx",
+    "password": "evarela"
+}
 
 # ###
 # # @name login
