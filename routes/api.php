@@ -3,6 +3,8 @@
 use App\Http\Controllers\Api\ApiController;
 use App\Http\Controllers\Api\AuthApiController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\MovimientoController;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
@@ -27,4 +30,9 @@ Route::post('auth', [AuthApiController::class, 'authenticate']);
 
 Route::prefix('user')->group(function () {
     Route::post('store', [UserController::class, 'store']);
+});
+
+Route::get('movimientos', [MovimientoController::class, 'getMovements']);
+
+Route::middleware('auth:api')->group(function () {
 });

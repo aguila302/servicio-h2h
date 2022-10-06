@@ -5,16 +5,35 @@
 
 ###
 
-GET {{url}}/saludo HTTP/1.1
+GET {{url}}/ HTTP/1.1
 
 ###
-    
+
+GET {{url}}/movimientos HTTP/1.1
+
+###
+
 POST {{url}}/user/store HTTP/1.1
 content-type: application/json
 
 {
-    "name": "emmanuel",
+    "name": "Emmanuel",
+    "last_name": "Varela",
+    "second_last_name": "Calderón",
+    "username": "evarela",
+    "phone": "5578933501",
+    "login_pin": "2399",
     "email": "e.varela@finsus.mx",
+    "password": "evarela"
+}
+
+###
+
+POST {{url}}/auth HTTP/1.1
+content-type: application/json
+
+{
+    "username": "evarela",
     "password": "evarela"
 }
 
@@ -37,7 +56,7 @@ content-type: application/json
 
 # {
 #     "credito": "1-3211-319",
-#     "cliente": "1-231-9", 
+#     "cliente": "1-231-9",
 #     "empresa": "FS"
 # }
 
@@ -54,6 +73,6 @@ content-type: application/json
 
 # ###
 
-# GET {{url}}/detail HTTP/1.1 
+# GET {{url}}/detail HTTP/1.1
 # Authorization: Bearer {{authToken}}
 
